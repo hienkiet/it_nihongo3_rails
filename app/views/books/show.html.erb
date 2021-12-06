@@ -12,3 +12,10 @@
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
+
+<p>
+  <strong>Image</strong>
+  <% if @book.image.attached? %>
+  <%= image_tag @book.image %>
+  <% end %>
+</p>
