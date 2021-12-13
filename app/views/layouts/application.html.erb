@@ -17,7 +17,7 @@
     <p class="alert"><%= alert %></p>
     </div>
     <% if user_signed_in? %>
-        <p>Konnichiwa,<%=current_user.email%></p>
+        <p>こんにちは、<%= link_to current_user.email, users_show_path %></p>
         <%=link_to "Log_in", destroy_user_session_path, method: :delete %>
       <% else %>
         <%=link_to "Sign_in", new_user_session_path %>
